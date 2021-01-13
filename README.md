@@ -1,2 +1,4 @@
 # BIN-SOH-
 computing SOH and identifying weakest cell from a BIN.
+
+####Computing CC parameter from Charger_Output_Current and Calculating SOH by using formula. SOH=CC/13delta(soc_new-soc_old). •Since the cells are connected in parallel the current is divided between two cells so we are dividing each instance of Charger_Output_Current by 2. •Converting A to Ah by dividing each instance of charger_output_current by 3600 and multiplying by 60. •we accumulate All the A values of Charger_output_current which Equates to CC. •SOC_OLD is Taken from initial charging time period and Mapping the corresponding cell voltages to SOC values from OCV vs SOC data. •SOC_NEW is Taken from final charging time period and Mapping the corresponding cell voltages to SOC values from OCV vs SOC data. •Then Calculate the difference between SOC_new and SOC_old and multiply by 13 since that much current has been given. •Finally computing SOH from the formula SOH=CC/13delta(soc_new-soc_old).
